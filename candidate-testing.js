@@ -3,22 +3,29 @@ const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-let candidateName;
+let candidateName = input.question("Enter your name here: ");
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question;
-let correctAnswer;
-let candidateAnswer;
+let question =  "Is React a frontend Framework? ";
+let correctAnswer = "yes";
+let candidateAnswer = input.question(question);
 
-
+const compareAnswer=(candidateAnswer, correctAnswer)=>{
+  if (candidateAnswer === correctAnswer){
+    console.log("You are correct")
+  }else
+  console.log("sorry try again")
+}
+compareAnswer()
 //TODO: Variables for Part 2
-let questions;
+let questions = ["Is React a frontend Framework", "Is Spiderman apart of Marvel?", ""];
 let correctAnswers;
 let candidateAnswers;
 
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-
+let userName = input.question("Enter Your name here:")
+console.log(userName)
 }
 
 function askQuestion() {
