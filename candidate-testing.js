@@ -21,14 +21,14 @@ let candidateAnswers = [];
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 let userName = input.question("Enter Your name here: ");
-candidateName = userName
+candidateName += userName
 }
 
 function askQuestion() {
  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 //   let firstQuestion = question
-// let firstAnswer = input.question(firstQuestion)
-// candidateAnswers.push(firstAnswer)
+// let firstAnswer = input.question(firstQuestion);
+// candidateAnswer += firstAnswer;
 for (let i = 0; i < questions.length; i++){
   let answer = input.question(questions[i]);
     candidateAnswers.push(answer)
@@ -38,6 +38,8 @@ console.log(`CORRECT ANSWER: ${correctAnswers[i]}`)
 }
 
 }
+console.log(askQuestion())
+console.log(candidateAnswer)
 
 function gradeQuiz(candidateAnswers) {
 let correct = []
