@@ -36,16 +36,15 @@ console.log(`YOUR ANSWER: ${answer}`)
 console.log(`CORRECT ANSWER: ${correctAnswers[i]}`)
 
 }
-
+  return candidateAnswers
 }
-console.log(askQuestion())
-console.log(candidateAnswer)
+
 
 function gradeQuiz(candidateAnswers) {
 let correct = []
 let incorrect = []
   // // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  
+
   for (let i = 0; i < correctAnswers.length; i++){
  let loweredCandidateAnswers = candidateAnswers[i].toLowerCase()
  let lowerCorrectAnswers = correctAnswers[i].toLowerCase()
@@ -53,6 +52,7 @@ let incorrect = []
       correct.push(loweredCandidateAnswers);
       } else incorrect.push(loweredCandidateAnswers)
   }
+  // console.log(candidateAnswers)
   let grade = correct.length / correctAnswers.length * 100  ;  //TODO 3.2 use this variable to calculate the candidates score.
 
   return grade;
@@ -66,7 +66,7 @@ function runProgram() {
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
-
+// runProgram()
 
 // ----------- Don't write any code or change any code below this line ---------- //
 module.exports = {
