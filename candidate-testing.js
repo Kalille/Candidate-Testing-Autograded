@@ -52,9 +52,7 @@ let incorrect = []
       correct.push(loweredCandidateAnswers);
       } else incorrect.push(loweredCandidateAnswers)
   }
-  // console.log(candidateAnswers)
   let grade = correct.length / correctAnswers.length * 100  ;  //TODO 3.2 use this variable to calculate the candidates score.
-
   return grade;
 }
 
@@ -64,7 +62,7 @@ function runProgram() {
   // TODO 1.1c: Greet candidate using their name //
    console.log(`Hello ${candidateName}!`);
   askQuestion();
-  gradeQuiz(this.candidateAnswers);
+  gradeQuiz(candidateAnswers);
 }
 // runProgram()
 
